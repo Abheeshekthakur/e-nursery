@@ -33,7 +33,7 @@
         <nav class="navbar">
           <a href="/">home</a>
           <!-- <a href="#product">product</a> -->
-          <a href="/team">contact</a>
+          <a href="/team">Team</a>
         </nav>
 
         <div class="icons">
@@ -72,13 +72,14 @@
         </div>
       </div>
     </section>
-
+    <% if(plants.length>0){ %>
     <section class="confirm">
-      <form action="get">
+      <!-- <form action="get">
         <button type="submit" class="btn">Proceed</button>
-      </form>
+      </form> -->
+      <a href="" class="btn">Proceed</a>
     </section>
-
+    <%}%>
     <section class="footer">
       <h1 class="credit">
         created by <span> e-nursery </span> | all rights reserved!
