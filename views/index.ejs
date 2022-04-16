@@ -34,11 +34,16 @@
         </nav>
 
         <div class="icons">
+            <a href="/admin"><i class="fa-solid fa-user"></i></a>
             <a href="/cart" class="fas fa-shopping-cart"></a>
             <!-- <a href="#" class="fas fa-heart"></a> -->
             <!-- <a href="#" class="fas fa-user-circle"></a> -->
             <div class="size"><%= cart.length %> </div>
+            <a href="/logout"><i class="fa-solid fa-right-from-bracket"></i></a>
         </div>
+        <!-- <div class="icons">
+            
+        </div> -->
 
     </div>
 
@@ -63,7 +68,7 @@
             <div id=<%=plant.name%> class="box">
                 <img src= <%=plant.image%> alt="">
                 <h3><%=plant.name%></h3>
-                <h4>Ratings:<strong><%=plant.quantity%></strong>/10 </h4>
+                <!-- <h4>Ratings:<strong></strong>/10 </h4> -->
                 <div class="quantity">
                     <span>quantity : </span>
                     <input type="number" name="orderedQuantity" min="0"
@@ -73,15 +78,15 @@
                         max = "10"
                     <% } %> 
                      value=<%= plant.qty %> >
-                    <span> /kg </span>
+                    <!-- <span> /kg </span> -->
                 </div>
                 <h2>price: Rs.<%=plant.price%></h2>
                 <div class="btn-container">
-                    <a href=<%=plant.name%> class="btn"><i class="fas fa-solid fa-eye"></i> View</a>
+                    <a href="/viewPlant/<%=plant.name%>" class="btn"><i class="fas fa-solid fa-eye"></i> </a>
                     <% if(plant.inCart===false) { %>
-                        <button type="submit" name="item" value=<%=plant.name%> class="btn"><i class="fas fa-solid fa-cart-plus"></i> cart</a>
+                        <button type="submit" name="item" value="<%=plant.name%>" class="btn"><i class="fas fa-solid fa-cart-plus"></i></a>
                     <% }else { %>
-                        <button type="submit" name="item" value=<%=plant.name%> class="btn remove"><i class="fas fa-solid fa-cart-minus"></i> cart</a>
+                        <button type="submit" name="item" value="<%=plant.name%>" class="btn remove"><i class="fa-solid fa-circle-minus"></i></a>
                     <% } %> 
                 </div>
         </div>
