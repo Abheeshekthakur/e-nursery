@@ -95,12 +95,12 @@ app.get("/team", function (req, res) {
   res.render("team", { cart });
 });
 
-arr.forEach((item) => {
-  app.get(`/${item.name}`, function (res, res) {
-    res.render("card", { plant: item });
-  });
+app.get("/user-details", function (req, res) {
+  res.render("user-details");
 });
-
+app.get("/order-placed", function (req, res) {
+  res.render("order-placed");
+});
 app.get("/add-plant", function (req, res) {
   res.render("add-plant");
 });
