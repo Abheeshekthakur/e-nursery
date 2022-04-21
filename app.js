@@ -156,12 +156,12 @@ app.post("/sign-in", function (req, res) {
 });
 
 app.post("/add-plant", function (req, res) {
-  // console.log(req.body.plantUrl);
+  // console.log(req.body.plantDescription);
   const plantToAdd = new Plants({
     // id: String,
     name: req.body.plantName,
     image: req.body.plantUrl,
-    decription: req.body.plantDecription,
+    description: req.body.plantDescription,
     price: req.body.plantPrice,
     inCart: false,
     qty: 0,
