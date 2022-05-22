@@ -200,8 +200,8 @@ function mailsent(email, otp) {
   var transporter = nodemailer.createTransport({
     service: "gmail",
     auth: {
-      user: "nursery.minor.project@gmail.com",
-      pass: "minorproject",
+      user: process.env.users,
+      pass: process.env.pass,
     },
   });
   var mailOptions = {
