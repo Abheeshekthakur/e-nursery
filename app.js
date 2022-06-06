@@ -198,7 +198,8 @@ app.post("/remove-plant", function (req, res) {
 
 function mailsent(email, otp) {
   var transporter = nodemailer.createTransport({
-    service: "gmail",
+    service: "hotmail",
+    port: 587,
     auth: {
       user: process.env.users,
       pass: process.env.pass,
